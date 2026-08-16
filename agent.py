@@ -4,7 +4,7 @@ from google.adk.tools.tool_context import ToolContext
 from google.adk.tools.base_tool import BaseTool
 from typing import Optional
 
-TARGET_BUCKET = "unnati0370cc408398a5qwiklabs"
+TARGET_BUCKET = "<replacewithyourbucket>"
 
 def pin_bucket_callback(
     tool: BaseTool,
