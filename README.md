@@ -1,6 +1,10 @@
 # adkgcstoolsets
-# GcsToolset is a custom toolset I wrote implementing ADK's BaseToolset interface — ADK doesn't ship a pre-built GCS search toolset natively, so this wraps the google-cloud-storage SDK into search_bucket and read_object tools.
-
-before_tool_call callback enforces bucket/prefix scoping, query validation, and logging — the pattern shown is the standard ADK callback signature (tool, args, tool_context) that can inspect or override any tool call before it executes.
-
-Everything's designed to plug into the deployment patterns from your earlier guides (Cloud Run, GKE with externalized sessions).
+This repo teaches before_tool_call + GCS tool scoping, not a full production agent.
+====================
+Key structure choices for clarity:
+====================
+Opens with a one-line "what problem does this solve" statement
+Quick-reference table pointing to the exact file for each concept
+Explains why before_tool_call matters before showing code
+Explicitly explains the None vs. dict return semantics, since that's the trickiest part for newcomers
+"Extending This Pattern" section signals what's intentionally left out (caching, per-user scoping, after_tool_call) so readers know it's a focused example, not a gap
